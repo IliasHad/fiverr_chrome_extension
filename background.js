@@ -21,7 +21,6 @@
           const specificProjects = [specificProjectsShort, specificProjectsLong];
           const projectsCount = htmlDocument.documentElement.querySelector(".js-db-status-tabs li  a");
           let data = [projectsCount.dataset.count, specificProjects];
-          console.log(specificProjects);
           return  data;
         })
         .then(count => {
@@ -30,7 +29,6 @@
             let countStr = count[0].toString()
     
            localStorage.setItem('count',countStr);
-           console.log(localStorage.getItem('count'));
            notifications();
         })
       
@@ -56,22 +54,16 @@
        
         chrome.notifications.create('Fiverr Notif', opt, replyBtnClick);
         function replyBtnClick () {
-          console.log(`Great News it's work and you have ${count}`)
           localStorage.removeItem('count');
-          console.log(localStorage.getItem('count'));
-          console.log(minProjects);
+         
   
       }
-      chrome.notifications.onClicked.addListener(function() {
-       chrome.tabs.create({url: `https://www.fiverr.com/users/${username}/requests`});
-   });
+    
      
     
     }
     else {
-      console.log(`Keep Learning, You don't have enough projects to apply`);
       localStorage.removeItem('count');
-      console.log(localStorage.getItem('count'));
   
     }
    

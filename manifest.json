@@ -1,7 +1,7 @@
 {
-    "name": "Fiverr Notifications",
-    "version": "1.0.0",
-    "description": "Unofficial Fiverr Chrome Extentions",
+    "name": "UnOfficial Fiverr Notifications",
+    "version": "1.0.1",
+    "description": "UnOfficial Fiverr Chrome Extentions",
     "background": {
       "scripts": ["background.js"],
       "persistent": true
